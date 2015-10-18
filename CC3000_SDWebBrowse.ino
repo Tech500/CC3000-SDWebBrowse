@@ -1,14 +1,18 @@
 /*
+
  Sketch uses Adafruit CC3000 Shield; reads directories and files on SD Card, lists directories and files to 
  web page.
+ 
+ Library License information can be read on  web page; at given download link, for each library.
+ 
  */
  
 
-#include <SdFat.h>   
-#include <SdFatUtil.h>
-#include <Adafruit_CC3000.h>
+#include <SdFat.h> //https://github.com/greiman/SdFat  
+#include <SdFatUtil.h>  //https://github.com/greiman/SdFat
+#include <Adafruit_CC3000.h>  //https://github.com/adafruit/Adafruit_CC3000_Library
 #include "utility/debug.h"   //https://github.com/adafruit/Adafruit_CC3000_Library
-#include <SPI.h>
+#include <SPI.h>  //  http://arduino.cc/en/Main/Software  included in Arduino IDE download
 
 #define BUFSIZ 64  //Size of read buffer for file download  
 
