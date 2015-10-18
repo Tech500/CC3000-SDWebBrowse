@@ -1,5 +1,5 @@
 /*
- Sketch uses Adafruit CC3000 Shield to read directories and files on SD Card; then, lists directories and files to 
+ Sketch uses Adafruit CC3000 Shield; reads directories and files on SD Card, lists directories and files to 
  web page.
  */
  
