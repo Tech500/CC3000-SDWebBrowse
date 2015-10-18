@@ -1,27 +1,6 @@
 /*
- * USERS OF ARDUINO 0023 AND EARLIER: use the 'SDWebBrowse.pde' sketch...
- * 'SDWebBrowse.ino' can be ignored.
- * USERS OF ARDUINO 1.0 AND LATER: **DELETE** the 'SDWebBrowse.pde' sketch 
- * and use ONLY the 'SDWebBrowse.ino' file.  By default, BOTH files will
- * load when using the Sketchbook menu, and the .pde version will cause
- * compiler errors in 1.0.  Delete the .pde, then load the sketch.
- *
- * I can't explain WHY this is necessary, but something among the various
- * libraries here appears to be wreaking inexplicable havoc with the
- * 'ARDUINO' definition, making the usual version test unusable (BOTH
- * cases evaluate as true).  FML.
- */
-
-/*
- * This sketch uses the microSD card slot on the Arduino CC3000 shield
- * to serve up files over a very minimal browsing interface
- *
- * Some code is from Bill Greiman's SdFatLib examples, some is from the
- * Arduino Ethernet WebServer example, some from Limor Fried
- * (Adafruit), and some from Tech500 so its probably under GPL
- *
- * Tutorial is at http://www.ladyada.net/learn/arduino/ethfiles.html
- * Pull requests should go to http://github.com/adafruit/SDWebBrowse
+ Sketch uses Adafruit CC3000 Shield to read directories and file on SD Card; then, lists directories and files to 
+ web page.
  */
  
 
@@ -48,8 +27,8 @@ Adafruit_CC3000 cc3000 = Adafruit_CC3000(ADAFRUIT_CC3000_CS, ADAFRUIT_CC3000_IRQ
 uint32_t ip = cc3000.IP2U32(192,168,1,71);
 int port = 8889;									 
 										 
-#define WLAN_SSID       "Security"   // cannot be longer than 32 characters!
-#define WLAN_PASS       "09acdc7388"
+#define WLAN_SSID       "YourSSID"   // cannot be longer than 32 characters!
+#define WLAN_PASS       "Your network password"
 // Security can be WLAN_SEC_UNSEC, WLAN_SEC_WEP, WLAN_SEC_WPA or WLAN_SEC_WPA2
 #define WLAN_SECURITY   WLAN_SEC_WPA2
 
